@@ -1,0 +1,35 @@
+Create a database called “Umuzi”.
+
+Create the following tables in the Umuzi database:
+
+    Customers
+    Employees
+    Orders
+    Payments
+    Products
+
+Create a primary key for each table with auto-increment (make sure you correctly specify the data types, e.g. the ID field should be int).
+
+Create foreign keys so that every ID in the order table references an existing ID in the tables referenced (e.g., ProductID, EmployeeID, etc).
+
+INSERT the records in the tables below into the table you created in step 2.
+
+     
+
+Customers Table
+CustomerID (int) 	FirstName (varchar50) 	LastName (varchar50) 	Gender (varchar) 	Address (varchar200) 	Phone (int 10) 	Email (varchar100) 	City (varchar20) 	Country (varchar50)
+
+Employees Table
+EmployeeID (int) 	FirstName (varchar50) 	LastName (varchar50) 	Email (varchar100) 	JobTitle (varchar20)
+
+Orders Table
+OrderId (int) 	ProductID (int) 	PaymentID (int) 	FulfilledByEmployeeID (int) 	DateRequired (datetime) 	DateShipped (datetime) 	Status (varchar20)
+
+Payments Table
+CustomerId (int) 	PaymentID (int) 	PaymentDate (datetime) 	Amount (decimal)
+
+Products Table
+ProductId (int) 	ProductName (varchar100) 	Description (varchar300) 	BuyPrice (decimal)
+
+
+
