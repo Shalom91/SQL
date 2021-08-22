@@ -1,4 +1,5 @@
-CREATE DATABASE Umuzi;
+-- DROP DATABASE IF EXISTS shop;
+-- CREATE DATABASE shop;
 
 CREATE TABLE Customers (
 	CustomerID INT PRIMARY KEY NOT NULL,
@@ -6,7 +7,7 @@ CREATE TABLE Customers (
 	Lastname CHAR(50) NOT NULL,
 	Gender CHAR,
 	Address CHAR(200) NOT NULL,
-	Phone INT(10),
+	Phone TEXT,
 	Email CHAR(100),
 	City CHAR(20),
 	Country CHAR(50)
@@ -45,11 +46,11 @@ CREATE TABLE Products (
     );
 
 INSERT INTO Customers (CustomerID, FirstName, LastName, Gender, Address, Phone, Email, City, Country)
-   VALUES (1, 'John', 'Hibert', 'M', '284 chaucer st', 084789657, 'john@gmail.com', 'Johannesburg', 'South Africa'),
-   (2, 'Thando', 'Sithole', 'F', '240 Sect 1', 0794445584, 'thando@gmail.com', 'Cape Town', 'South Africa'), 
-   (3, 'Leon', 'Glen', 'M', '81 Everton Rd,Gillits', 0820832830, 'Leon@gmail.com', 'Durban', 'South Africa'), 
-   (4, 'Charl', 'Muller', 'M', '290A Dorset Ecke', 44856872553, 'Carl.muller@yahoo.com', 'Berlin', 'Germany'), 
-   (5, 'Julia', 'Stein', 'F', '2 Wernerring', 448672445058, 'Js234@yahoo.com', 'Frankfurt', 'Germany'); 
+   VALUES (1, 'John', 'Hibert', 'M', '284 chaucer st', '084789657', 'john@gmail.com', 'Johannesburg', 'South Africa'),
+   (2, 'Thando', 'Sithole', 'F', '240 Sect 1', '0794445584', 'thando@gmail.com', 'Cape Town', 'South Africa'), 
+   (3, 'Leon', 'Glen', 'M', '81 Everton Rd,Gillits', '0820832830', 'Leon@gmail.com', 'Durban', 'South Africa'), 
+   (4, 'Charl', 'Muller', 'M', '290A Dorset Ecke', '+44856872553', 'Carl.muller@yahoo.com', 'Berlin', 'Germany'), 
+   (5, 'Julia', 'Stein', 'F', '2 Wernerring', '+448672445058', 'Js234@yahoo.com', 'Frankfurt', 'Germany'); 
    
 INSERT INTO Employees (EmployeeID, FirstName, LastName, Email, JobTitle)
    VALUES (1, 'Kani', 'Matthew', 'mat@gmail.com', 'Manager'),
