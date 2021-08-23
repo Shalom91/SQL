@@ -2,12 +2,12 @@ SELECT * FROM customers;
 
 SELECT firstname, lastname FROM customers;
 
-SELECT firstname, lastname FROM customers WHERE customerid = 1;
+SELECT firstname, lastname FROM customers WHERE id = 1;
 
 UPDATE customers SET firstname = 'Lerato', lastname = 'Mabitso'
-WHERE customerid = 1;
+WHERE id = 1;
 
-DELETE FROM customers WHERE customerid = 2;
+DELETE FROM customers WHERE id = 2;
 
 SELECT COUNT(DISTINCT status) FROM orders;
 
@@ -31,8 +31,8 @@ SELECT AVG(buyprice) FROM products;
 
 SELECT AVG(buyprice/12) FROM products;
 
-SELECT paymentid, firstname, lastname, amount FROM payments
-INNER JOIN customers ON customers.customerid = payments.customerid;
+SELECT * FROM payments
+INNER JOIN customers ON customers.id = payments.id;
 
 SELECT * FROM products WHERE description LIKE 'Turnable front wheel%';
 

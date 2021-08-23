@@ -8,8 +8,8 @@ services:
     ports:
       - 8080:8080
     volumes:
-      -  ./create_database.sql:/docker-entrypoint-initdb.d/create_database.sql
-      -  ./sql_commands.sql:/docker-entrypoint-initdb.d/sql_commands.sql
+      -  ./create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      -  ./sql_query.sql:/docker-entrypoint-initdb.d/sql_query.sql
 
 
 
