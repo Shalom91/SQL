@@ -42,9 +42,10 @@ WHERE status = 'Shipped'
 GROUP BY
     status;
 
-SELECT AVG(buyprice) AS the_average_price_in_rands FROM products;
+SELECT ROUND(AVG(buyprice)::numeric, 2) AS the_average_price_in_rands, 
+ROUND(AVG(buyprice/12)::numeric, 2) AS the_average_price_in_dollars 
+FROM products;
 
-SELECT AVG(buyprice/12) AS the_average_price_in_dollars FROM products;
 
 SELECT * FROM payments
 INNER JOIN customers ON customers.id = payments.id;
