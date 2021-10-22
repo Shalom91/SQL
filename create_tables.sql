@@ -1,5 +1,12 @@
-DROP 
-  TABLE IF EXISTS Customers;
+DROP TABLE IF EXISTS
+  Customers,
+  Employees,  
+  Payments,
+  Products,
+  Orders,
+CASCADE;
+
+
 CREATE TABLE Customers (
   id INT PRIMARY KEY NOT NULL, 
   Firstname CHAR(50) NOT NULL, 
@@ -12,8 +19,7 @@ CREATE TABLE Customers (
   Country CHAR(50)
 );
 
-DROP 
-  TABLE IF EXISTS Employees;
+
 CREATE TABLE Employees (
   id INT PRIMARY KEY NOT NULL, 
   Firstname CHAR(50) NOT NULL, 
@@ -22,8 +28,7 @@ CREATE TABLE Employees (
   JobTitle CHAR(50)
 );
 
-DROP 
-  TABLE IF EXISTS Payments;
+
 CREATE TABLE Payments (
   id INT PRIMARY KEY NOT NULL, 
   customerid INT REFERENCES customers (id), 
@@ -31,8 +36,7 @@ CREATE TABLE Payments (
   Amount DECIMAL NOT NULL
 );
 
-DROP 
-  TABLE IF EXISTS Products;
+
 CREATE TABLE Products (
   id INT PRIMARY KEY NOT NULL, 
   Productname CHAR(100) NOT NULL, 
@@ -40,8 +44,7 @@ CREATE TABLE Products (
   BuyPrice DECIMAL NOT NULL
 );
 
-DROP 
-  TABLE IF EXISTS Orders;
+
 CREATE TABLE Orders (
   id INT PRIMARY KEY NOT NULL, 
   productid INT REFERENCES Products (id), 
