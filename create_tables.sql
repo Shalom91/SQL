@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS
   Employees,  
   Payments,
   Products,
-  Orders,
+  Orders
 CASCADE;
 
 
@@ -33,7 +33,8 @@ CREATE TABLE Payments (
   id INT PRIMARY KEY NOT NULL, 
   customerid INT REFERENCES customers (id), 
   PaymentDate DATE NOT NULL, 
-  Amount DECIMAL NOT NULL
+  Amount DECIMAL NOT NULL,
+  customer_id INT REFERENCES Customers (id)
 );
 
 
