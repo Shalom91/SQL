@@ -87,8 +87,6 @@ VALUES
     3, 3, 3, 3, '06-09-2018', NULL, 'Not shipped'
   );
 
-UPDATE payments SET customerid = 1 WHERE id = 1;
-UPDATE payments SET customerid = 2 WHERE id = 4;
-UPDATE payments SET customerid = 3 WHERE id = 5;
+
 
 
